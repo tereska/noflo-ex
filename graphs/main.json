@@ -64,17 +64,17 @@
             "metadata": {}
         },
         {
-            "data": 1000,
-            "tgt": {
-                "process": "core/RunInterval_rnw23",
-                "port": "interval"
-            }
-        },
-        {
             "data": "start",
             "tgt": {
                 "process": "core/Kick_nt9em",
                 "port": "data"
+            }
+        },
+        {
+            "data": 500,
+            "tgt": {
+                "process": "core/RunInterval_rnw23",
+                "port": "interval"
             }
         }
     ]
