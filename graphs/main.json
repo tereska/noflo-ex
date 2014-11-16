@@ -9,30 +9,30 @@
     "outports": {},
     "groups": [],
     "processes": {
-        "core/RunInterval_rnw23": {
+        "timer": {
             "component": "core/RunInterval",
             "metadata": {
-                "label": "core/RunInterval",
+                "label": "timer",
                 "x": 612,
                 "y": 216,
                 "width": 72,
                 "height": 72
             }
         },
-        "core/Kick_nt9em": {
+        "startuj": {
             "component": "core/Kick",
             "metadata": {
-                "label": "core/Kick",
+                "label": "startuj",
                 "x": 432,
                 "y": 216,
                 "width": 72,
                 "height": 72
             }
         },
-        "slawek/MyCool_t2uvg": {
+        "logowaczka": {
             "component": "slawek/MyCool",
             "metadata": {
-                "label": "slawek/MyCool",
+                "label": "logowaczka",
                 "x": 792,
                 "y": 216,
                 "width": 72,
@@ -43,22 +43,22 @@
     "connections": [
         {
             "src": {
-                "process": "core/Kick_nt9em",
+                "process": "startuj",
                 "port": "out"
             },
             "tgt": {
-                "process": "core/RunInterval_rnw23",
+                "process": "timer",
                 "port": "start"
             },
             "metadata": {}
         },
         {
             "src": {
-                "process": "core/RunInterval_rnw23",
+                "process": "timer",
                 "port": "out"
             },
             "tgt": {
-                "process": "slawek/MyCool_t2uvg",
+                "process": "logowaczka",
                 "port": "in"
             },
             "metadata": {
@@ -68,14 +68,14 @@
         {
             "data": "start",
             "tgt": {
-                "process": "core/Kick_nt9em",
+                "process": "startuj",
                 "port": "data"
             }
         },
         {
             "data": 500,
             "tgt": {
-                "process": "core/RunInterval_rnw23",
+                "process": "timer",
                 "port": "interval"
             }
         }
