@@ -1,0 +1,81 @@
+{
+    "properties": {
+        "name": "main",
+        "environment": {
+            "type": "noflo-nodejs"
+        }
+    },
+    "inports": {},
+    "outports": {},
+    "groups": [],
+    "processes": {
+        "core/RunInterval_rnw23": {
+            "component": "core/RunInterval",
+            "metadata": {
+                "label": "core/RunInterval",
+                "x": 612,
+                "y": 216,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Kick_nt9em": {
+            "component": "core/Kick",
+            "metadata": {
+                "label": "core/Kick",
+                "x": 432,
+                "y": 216,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Output_y6hbk": {
+            "component": "core/Output",
+            "metadata": {
+                "label": "core/Output",
+                "x": 828,
+                "y": 216,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "connections": [
+        {
+            "src": {
+                "process": "core/Kick_nt9em",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/RunInterval_rnw23",
+                "port": "start"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "core/RunInterval_rnw23",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/Output_y6hbk",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "data": 1000,
+            "tgt": {
+                "process": "core/RunInterval_rnw23",
+                "port": "interval"
+            }
+        },
+        {
+            "data": "start",
+            "tgt": {
+                "process": "core/Kick_nt9em",
+                "port": "data"
+            }
+        }
+    ]
+}
