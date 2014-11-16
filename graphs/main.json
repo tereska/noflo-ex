@@ -43,8 +43,8 @@
             "component": "slawek/MyCool",
             "metadata": {
                 "label": "slawek/MyCool",
-                "x": 792,
-                "y": 324,
+                "x": 972,
+                "y": 216,
                 "width": 72,
                 "height": 72
             }
@@ -69,6 +69,17 @@
             },
             "tgt": {
                 "process": "core/Output_y6hbk",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "core/Output_y6hbk",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "slawek/MyCool_t2uvg",
                 "port": "in"
             },
             "metadata": {}
