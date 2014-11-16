@@ -4,6 +4,7 @@ exports.getComponent = function () {
   var c = new noflo.Component();
 
   c.inPorts.add('in', function (event, payload) {
+    console.log("AAAAA");
     if (event !== 'data') {
       return;
     }

@@ -29,21 +29,11 @@
                 "height": 72
             }
         },
-        "core/Output_y6hbk": {
-            "component": "core/Output",
-            "metadata": {
-                "label": "core/Output",
-                "x": 828,
-                "y": 216,
-                "width": 72,
-                "height": 72
-            }
-        },
         "slawek/MyCool_t2uvg": {
             "component": "slawek/MyCool",
             "metadata": {
                 "label": "slawek/MyCool",
-                "x": 972,
+                "x": 792,
                 "y": 216,
                 "width": 72,
                 "height": 72
@@ -68,21 +58,12 @@
                 "port": "out"
             },
             "tgt": {
-                "process": "core/Output_y6hbk",
-                "port": "in"
-            },
-            "metadata": {}
-        },
-        {
-            "src": {
-                "process": "core/Output_y6hbk",
-                "port": "out"
-            },
-            "tgt": {
                 "process": "slawek/MyCool_t2uvg",
                 "port": "in"
             },
-            "metadata": {}
+            "metadata": {
+                "route": null
+            }
         },
         {
             "data": "start",
